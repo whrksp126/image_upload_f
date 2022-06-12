@@ -8,12 +8,14 @@ import MainPage from "./pages/MainPage";
 import RegisterPage from "./pages/RegisterPage";
 // npm i react-router-dom (페이지를 만들기 위해서)
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import ToolBar from "./components/ToolBar";
 
 const App = () => {
   return (
     <div style={{maxWidth: 600, margin:"auto"}}>
       {/* toastify를 전역에서 사용할 수 있게함 */}
       <ToastContainer />
+      <ToolBar />
         <Routes>
           {/* exact는 완전 동일한 url 일때만 해당 컴포넌트를 보여줘라는 의미 */}
           <Route path="/auth/register" exact element={<RegisterPage />} />
